@@ -1,0 +1,17 @@
+schedulers:
+  taskconfig:
+    - name: find
+      task:
+        query: "{'orderedDay': 'Wednesday'}"
+        scheduleTime: "0/20 * * * * *"
+    - name: aggregation
+      task:
+        query: nestedValue4
+        scheduleTime: "0/5 * * * * *"
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: productmanagementsystem
